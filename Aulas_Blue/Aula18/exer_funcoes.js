@@ -29,17 +29,17 @@ function jogo() {
   console.log(
     "À sua frente existem duas portas, escolha uma delas e prepare-se para o desconhecido. Qual porta você irá escolher?"
   );
-  let escolha = prompt("\033[1;34m Direita ou Esquerda? ");
+  let escolha = String(prompt("\033[1;34m Direita ou Esquerda? ")).toUpperCase();
   if (
-    escolha.toUpperCase() == "Esquerda".toUpperCase() ||
-    escolha.toUpperCase() == "e".toUpperCase()
+    escolha == "ESQUERDA"||
+    escolha == "E"
   ) {
     return console.log(
       `Você entrou na sala à ESQUERDA, parece que não tem nada por aqui. Acho melhor você voltar correndo!`
     );
   } else if (
-    escolha.toUpperCase() == "Direita".toUpperCase() ||
-    escolha.toUpperCase() == "d".toUpperCase()
+    escolha == "DIREITA" ||
+    escolha == "D"
   ) {
     return console.log(
       "Excelente escolha! A sala à DIREITA estava te esperando esse tempo todo! Que maravilhoso isso. Pena que não tem nada aqui para você."
