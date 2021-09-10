@@ -10,15 +10,15 @@ let nascimento = +prompt("Digite o ano do seu nascimento: ");
 console.log();
 function autorizaVoto(nascimento) {
   if (nascimento >= 2006) {
-    return console.log(
+    console.log(
       "\33[1;31m PREZADO ELEITOR: Votação negada, você não pode votar!\n"
     );
   } else if ((nascimento < 2006 && nascimento >= 2004) || nascimento < 1951) {
-    return console.log(
+    console.log(
       "\033[1;34m PREZADO ELEITOR: Votação opcional, você pode votar, mas, não é obrigado!\n"
     );
   } else {
-    return console.log(
+    console.log(
       "\033[1;33m PREZADO ELEITOR: Você está obrigado a votar!\n"
     );
   }
@@ -28,9 +28,9 @@ autorizaVoto(nascimento);
 // Fução para autorizar a votação ou não.
 function votacao(nascimento) {
   if (nascimento >= 2006) {
-    return console.log("PREZADO ELEITOR: Voce não está autorizado a votar!\n");
+    console.log("PREZADO ELEITOR: Voce não está autorizado a votar!\n");
   } else {
-    return console.log(
+    console.log(
       "\033[1;32m Você está autorizado a votar, vamos iniciar a votação:\n "
     );
   }
