@@ -9,7 +9,7 @@ console.log("                                         O ESTÁGIARIO             
 console.log("============================================================================================\033[0m");
 
 console.log("\nA sua jornada começa em uma segunda-feira chuvosa na cidade de São Paulo. \nVocê sempre se levanta às 7h para se aprontar para o trabalho.\nSó que hoje ao despertar seu smartphone você estava muito cansado e resolve????" )
-
+function jogo(){
 while(true){
     console.log("\033[1;33m\n1 = LEVANTAR  / 2 = DEITADO \033[0m")
     let escolha1 = parseInt(prompt("\033[1;32mEscolha [1] ou [2]: \033[0m"));
@@ -58,3 +58,5 @@ while(true){
     if ((escolha = 1))
     break;
 }
+}
+jogo();
