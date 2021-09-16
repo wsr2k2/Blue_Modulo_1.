@@ -1,8 +1,18 @@
 const prompt = require("prompt-sync")();
 
 
-const nome = prompt("\033[1;33mDigite o seu nome: \033[0m")
-console.log("\033[1;35m\nDaqui pra frente você será lembrado como: " + nome + " - A(O) ESTÁGIARIA(O)\033[0m");
+class Pessoa{
+    contructor() {
+this.nome = "";
+this.idade = "";
+    }    
+}
+
+    let pessoa = new Pessoa();
+    pessoa.nome = (prompt(console.log("\033[1;33mDigite o seu nome: \033[0m")));
+    pessoa.idade = parseInt(prompt("\033[1;33mDigite a sua idade: \033[0m"));
+
+console.log("\033[1;35m\nDaqui pra frente você será lembrado como: " + pessoa.nome + " - A(O) ESTÁGIARIA(O)\033[0m");
 console.log();
 console.log("\033[1;36m============================================================================================");
 console.log("                                         O ESTÁGIARIO                                       ");
@@ -10,6 +20,7 @@ console.log("===================================================================
 
 console.log("\nA sua jornada começa em uma segunda-feira chuvosa na cidade de São Paulo. \nVocê sempre se levanta às 7h para se aprontar para o trabalho.\nSó que hoje ao despertar seu smartphone você estava muito cansado e resolve????" )
 
+function jogo(){
 while(true){
     console.log("\033[1;33m\n1 = LEVANTAR  / 2 = DEITADO \033[0m")
     let escolha1 = parseInt(prompt("\033[1;32mEscolha [1] ou [2]: \033[0m"));
@@ -31,7 +42,7 @@ while(true){
     console.log("\nSeus colegas te chamam para tomar um café, o que você decide?")
     console.log("\033[1;33m1 = CAFÉ / 2 = TRABALHO: \033[0m")
 
-    let escolha2 = parseInt(prompt("Escolha [1] ou [2]: "));
+    let escolha2 = parseInt(prompt("\033[1;32mEscolha [1] ou [2]: \033[0m"));
     if (escolha2 == 1){
         console.log("Durante o café vocês combinam de sair a noite para umas brejas.... Pretendem sair no horário normal, às 18:00H... logo depois você volta para seu setor.")
     }
@@ -42,7 +53,7 @@ while(true){
     console.log("\nSeu líder pede para você fazer hora extra hoje, para você 'AJUDAR(FAZER)' um serviço com ele.")
     console.log("\033[1;33m1 = ACEITA / 2 = RECUSA: \033[0m");
 
-    let escolha4 = parseInt(prompt("Escolha [1] ou [2]: "));
+    let escolha4 = parseInt(prompt("\033[1;32mEscolha [1] ou [2]: \033[0m"));
     if (escolha4 == 1){
         console.log("\nVocê aceita, e quando são 18:00h seus colegas aprecem para te chamar e ficam sabendo \nque você mais uma vez vai ser o trouxa do setor e ficar até mais tarde.")
         console.log("\nEles saem, com certeza vão se divertir muito e você não..... \nDe repente seu líder chega e te avisa que está indo embora, e te deixa sozinho para trampar pra ele..... \n\033[1;31mO ESTAGIOTÁRIO mais uma vez passado para trás...\033[0m")
@@ -58,3 +69,5 @@ while(true){
     if ((escolha = 1))
     break;
 }
+}
+jogo();
